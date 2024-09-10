@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Position Fixed</title>
+    <style>
+        .navbar {
+            background-color: paleturquoise;
+            padding: 1rem;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 970;
+        }
+
+        .navbar a {
+            color: black;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .box:first-of-type {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+        }
+
+        .dot {
+            width: 30px;
+            height: 30px;
+            background-color: aqua;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        .card {
+            max-width: 33.333%;
+            margin-right: -3px;
+            display: inline-block;
+            border-radius: 6px;
+            border: 2px solid black;
+        }
+
+        .card .img-wrapper {
+            position: relative;
+        }
+
+        .card .img-wrapper::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: linear-gradient(0deg, #00000030, transparent 25%);
+        }
+
+        .card img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .card .card-body {
+            padding: 1rem;
+        }
+
+        .card h3 {
+            position: absolute;
+            bottom: 12px;
+            color: white;
+            left: 1rem;
+            margin-bottom: 0;
+        }
+
+        .card button {
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 3px;
+            width: 100%;
+            padding-block: 0.5rem;
+        }
+
+        .badge {
+            background-color: crimson;
+            color: white;
+            padding: 0.2rem;
+            font-weight: bold;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .bubble {
+            background-color: palegreen;
+            padding: 1rem;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 50%;
+            z-index: 960;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <nav>
+            <a href="#">Navbar</a>
+        </nav>
+    </header>
+
+    <h1>Position FIXED: .
+
+    </h1>
+    <div class="container">
+        <div class="box palegolden">
+            <span class="dot"></span>
+        </div>
+        <div class="box coral"></div>
+        <div class="box crimson"></div>
+        <div class="bubble">💬</div>
+    </div>
+
+
+    <section>
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1554227231-54aa5db01c51?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <span class="badge">SALE</span>
+                <h3>titolo</h3>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga sed ipsa laboriosam esse ipsum?</p>
+                <button>click me</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1627140396257-cd24aa8173ce?q=80&w=1947&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <span class="badge">SALE</span>
+                <h3>titolo</h3>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem maiores illum unde provident pariatur
+                    laboriosam sunt similique doloribus ut dolorum ullam magnam, aut nulla soluta laborum, nemo veniam
+                    ratione tempore!</p>
+                <button>click me</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1723662887372-b6f42b6ccd50?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
+                <span class="badge">SALE</span>
+                <h3>titolo</h3>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magni mollitia vitae accusamus illo animi
+                    nesciunt in placeat voluptas quisquam, fugit enim voluptatem amet perspiciatis unde similique sed
+                    quo ipsum!
+                    Sed nostrum minima rem inventore, nesciunt quo beatae, ut quis, exercitationem amet reiciendis
+                    sapiente iure porro laudantium molestias ratione maiores. Fugiat itaque sequi voluptate nam beatae
+                    voluptates ipsa autem. Aliquid!
+                    At non reprehenderit molestiae ipsam laudantium dignissimos, quis, consectetur, odit velit quae
+                    doloremque voluptatibus excepturi tempora animi ipsa iure ea eos temporibus debitis maiores placeat
+                    provident laboriosam veniam? Ipsam, delectus?</p>
+                <button>click me</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</body>
+
+</html>
